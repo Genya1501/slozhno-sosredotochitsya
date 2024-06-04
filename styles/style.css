@@ -1,5 +1,186 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
+:root {
+  --accent-clr: #FF0070;
+  --accent-clr-with-background: #000028;
+  --accent-heading-clr: #db00ff;
+  --text-clr: #f1b2ce;
+  --heading-clr: #ff0070;
+  --button-hover-clr: #ff007066;
+  --decorative-bracket-clr: #ff0070;
+  --menu-clr: #ff0070;
+  --headers-clr: #ff0070;
+  --rec-decoration-clr: #ff0070;
+  --cover-image: url(../images/cover-image-dark.png);
+  --gap: 20px;
+  --main-font: "IBM Plex mono";
+  --accent-heading-fs-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --accent-heading-fs-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --bold: 700;
+}
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  margin: 0 auto;
+  padding: 10px;
+  background-image: var(--cover-image);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed
+}
+.header {
+  display: grid;
+  grid-template-rows: auto max-content auto;
+  height: 100vh;
+}
+.decorated-zone {
+}
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+  /* margin: 65px 0 0 0; */
+}
+.header__theme-menu-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.header__theme-menu-button {
+  color: var(--accent-clr);
+  background-color: transparent;
+  border: none;
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 1.125em;
+  text-align: center;
+}
+.header__heading {
+  color: var(--accent-heading-clr);
+  font-weight: var(--bold);
+  font-size: var(--accent-heading-fs-mobile);
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--accent-clr);
+  font-family: var(--main-font);
+  /* margin: 65px 0 0 0; */
+}
+.header__text {
+  color: var(--accent-clr-with-background);
+  background-color: var(--accent-clr);
+  font-family: var(--main-font);
+  line-height: 23px;
+  align-self: end;
+  /* margin: 55px 0 66px 0; */
+  font-weight: var(--bold);
+  font-size: 18px;
+}
+.why {
+  margin-top: 13px; 
+}
+.why__heading {
+font-family: var(--main-font);
+line-height: 23px;
+color: var(--accent-clr);
+font-weight: var(--bold);
+font-size: 18px;
+}
+.why__list {
+  margin-top: 20px;
+}
+.why__list-title {
+font-family: var(--main-font);
+line-height: 23px;
+color: var(--accent-clr-with-background);
+background-color:var(--accent-clr);
+margin-bottom: 10px;
+font-weight: 700;
+font-size: 18px;
+line-height: 23px;
+}
+.why__list-text {
+  color: var(--text-clr);
+font-family: var(--main-font);
+font-weight: 400;
+line-height: 23px;
+margin-bottom: 28px;
+font-size: 18px;
+
+}
+.accent-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-clr);
+}
+.what {
+  /* margin-bottom: 30px; */
+}
+.what__heading {
+font-family: var(--main-font);
+line-height: 23px;
+color: var(--accent-clr);
+/* margin:30px 0 20px 0; */
+}
+.what__list-title {
+font-family: var(--main-font);
+line-height: 23px;
+color: var(--accent-clr-with-background);
+background-color: var(--accent-clr);
+/* margin-bottom: 10px; */
+}
+.what__list-text  {
+font-family: var(--main-font);
+font-weight: 400;
+line-height: 23px;
+color: var(--text-clr);
+/* margin-bottom: 20px; */
+}
+.how {
+  margin-bottom: 30px;
+}
+.how__heading {
+  font-size: 18px;
+font-family: var(--main-font);
+line-height: 23px;
+color: var(--accent-clr);
+/* margin-bottom: 20px; */
+}
+.how__list-heading {
+font-family: var(--main-font);
+line-height: 23px;
+color: var(--accent-clr-with-background);
+background-color: var(--accent-clr);
+/* margin-bottom: 20px; */
+font-size: 18px;
+}
+.how__list-title {
+font-family: var(--main-font);
+font-weight: 400;
+line-height: 23px;
+color: var(--accent-clr-with-background);
+background-color: var(--accent-clr);
+/* margin-bottom: 10px; */
+}
+.how__list-text {
+  color: var(--text-clr);
+font-family: var(--main-font);
+font-weight: 400;
+line-height: 23px;
+/* margin-bottom: 20px; */
+}
+.gallery__img {
+  object-fit: cover;
+  width: 100%;
+  /* margin-bottom: 10px; */
+}
+.footer  {
+  /* margin: 30px 0 0 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.footer__text {
+  color: var(--accent-heading-clr);
+  font-weight: var(--bold);
+  font-size: var(--accent-heading-fs-mobile);
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0 var(--accent-clr);
+  font-family: var(--main-font);
 }

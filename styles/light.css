@@ -9,11 +9,7 @@
   --accent-clr: #ff8dcb;
   --accent-clr-with-background: #353430;
   --accent-heading-clr: #ffc2e6;
-  --text-clr: #353430;
-  --decorative-bracket-clr: #353430;
-  --menu-clr: #353430;
   --rec-decoration-clr: transparent;
-  --heading-clr: #353430;
 }
 
 @media (prefers-color-scheme: light) {
@@ -22,11 +18,7 @@
     --accent-clr: #ff8dcb;
     --accent-clr-with-background: #353430;
     --accent-heading-clr: #ffc2e6;
-    --text-clr: #353430;
-    --decorative-bracket-clr: #353430;
-    --menu-clr: #353430;
     --rec-decoration-clr: transparent;
-    --heading-clr: #353430;
   }
 }
 

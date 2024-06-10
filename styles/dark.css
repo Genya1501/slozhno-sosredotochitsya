@@ -11,11 +11,6 @@
   --color-h1-dark: #db00ff;
   --text-color-dark-main: #f1b2ce;
   --button-hover-clr: #ff007066;
-  --heading-clr: #ff0070;
-  --decorative-bracket-clr: #ff0070;
-  --menu-clr: #ff0070;
-  --headers-clr: #ff0070;
-  --rec-decoration-clr: #ff0070;
   --cover-image: url(../images/cover-image-dark.png);
 }
 @media (prefers-color-scheme: dark) {
@@ -25,11 +20,6 @@
     --accent-heading-clr: #db00ff;
     --text-clr: #f1b2ce;
     --button-hover-clr: #ff007066;
-    --heading-clr: #ff0070;
-    --decorative-bracket-clr: #ff0070;
-    --menu-clr: #ff0070;
-    --headers-clr: #ff0070;
-    --rec-decoration-clr: #ff0070;
     --cover-image: url(../images/cover-image-dark.png);
   }
 }

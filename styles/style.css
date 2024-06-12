@@ -1,19 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-:root {
-  --accent-clr: #ff0070;
-  --accent-clr-with-background: #000028;
-  --accent-heading-clr: #db00ff;
-  --text-clr: #f1b2ce;
-  --button-hover-clr: #ff007066;
-  --cover-image: url(../images/cover-image-dark.png);
-  --main-font: "IBM Plex mono";
-  --accent-heading-fs-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --accent-heading-fs-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  --bold: 700;
-}
 .page {
   margin: 0 auto;
-  padding: 10px;
+  padding: 0 10px 0 10px;
   background-image: var(--cover-image);
   background-repeat: no-repeat;
   background-position: top center;
@@ -25,8 +13,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 4px 12px 0 0;
-  color: var(--accent-clr);
+  margin: 14px 12px 0 0;
+  color: var(--rec-decoration-clr);
   inset-inline-end: 0;
   inset-block-start: 0;
 }
@@ -37,8 +25,8 @@
   border-radius: 50%;
   inline-size: 7px;
   block-size: 7px;
-  background-color: var(--accent-clr);
-  box-shadow: 0 0 5px 4px var(--accent-clr);
+  background-color: var(--rec-decoration-clr);
+  box-shadow: 0 0 5px 4px var(--rec-decoration-clr);
 }
 .header {
   position: relative;
@@ -48,7 +36,8 @@
 }
 .decorated-zone::before {
   content: "";
-  inset: 0 93%;
+  top: 9px;
+  right: 0;
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
@@ -57,7 +46,8 @@
 }
 .decorated-zone::after {
   content: "";
-  inset: 91% 0 0 0;
+  left: 0;
+  bottom: 10px;
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
@@ -65,7 +55,7 @@
   border-left: 1px solid var(--accent-clr);
 }
 .header__theme-menu {
-  margin: 66px 8px 0 0;
+  margin: 73px 2px 0 0;
   justify-self: end;
 }
 .header__theme-menu-list {
@@ -74,7 +64,7 @@
   gap: 13px;
 }
 .header__theme-menu-button {
-  color: var(--accent-clr);
+  color: var(--menu-clr);
   background-color: transparent;
   border: none;
   padding: 2.5px 12px;
@@ -84,53 +74,53 @@
   line-height: 1.125em;
   text-align: center;
   text-transform: lowercase;
+  cursor: pointer;
 }
 .header__theme-menu-button:hover {
   outline: 1px solid var(--button-hover-clr);
 }
-
 .header__theme-menu-button:focus {
   outline: none;
 }
-
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--accent-clr);
-  outline: none;
 }
-
 .header__theme-menu-button_active {
   outline: 1px solid var(--menu-clr);
-  pointer-events: none;
 }
 .header__heading {
+  margin-top: 66px;
+}
+.accent-shadow-text {
   color: var(--accent-heading-clr);
   font-weight: var(--bold);
   font-size: var(--accent-heading-fs-mobile);
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--accent-clr);
   font-family: var(--main-font);
-  margin-top: 71px;
 }
 .header__text {
-  color: var(--accent-clr-with-background);
-  background-color: var(--accent-clr);
   font-family: var(--main-font);
   line-height: 23px;
   align-self: end;
-  margin-bottom: 98px;
+  margin-bottom: 67px;
   font-weight: var(--bold);
   font-size: 18px;
 }
-.main__content {
+.accent-background {
+  color: var(--accent-clr-with-background);
+  background-color: var(--accent-clr);
+}
+.content {
   margin-bottom: 40px;
 }
 .why {
-  margin-top: 11px;
+  margin-top: 41px;
 }
 .why__heading {
   font-family: var(--main-font);
   line-height: 23px;
-  color: var(--accent-clr);
+  color: var(--heading-clr);
   font-weight: var(--bold);
   font-size: 18px;
 }
@@ -143,7 +133,7 @@
   color: var(--accent-clr-with-background);
   background-color: var(--accent-clr);
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: var(--bold);
   font-size: 18px;
   line-height: 23px;
 }
@@ -158,13 +148,16 @@
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-clr);
 }
+.accent-link:hover {
+  border-bottom: 1px solid;
+}
 .what {
   margin-top: 47px;
 }
 .what__heading {
   font-family: var(--main-font);
   line-height: 23px;
-  color: var(--accent-clr);
+  color: var(--heading-clr);
   font-style: normal;
   font-size: 18px;
 }
@@ -193,7 +186,7 @@
   font-size: 18px;
   font-family: var(--main-font);
   line-height: 23px;
-  color: var(--accent-clr);
+  color: var(--heading-clr);
 }
 .how__list-container {
   margin-top: 20px;
@@ -227,6 +220,15 @@
 .gallery {
   margin-top: 49px;
 }
+.gallery__heading {
+font-family: var(--main-font);
+font-style: normal;
+font-weight: var(--bold);
+font-size: 18px;
+line-height: 23px;
+color: var(--accent-clr-with-background);
+background-color: var(--accent-clr);
+}
 .gallery__list {
   margin-top: 10px;
   display: flex;
@@ -241,11 +243,10 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   height: 100vh;
 }
 .footer__text {
-  margin-top: 282px;
   color: var(--accent-heading-clr);
   font-weight: var(--bold);
   font-size: var(--accent-heading-fs-mobile);
@@ -255,41 +256,49 @@
 }
 @media (min-width: 768px) {
   .page {
-    padding: 20px;
+    padding: 0 20px 0 20px;
+  }
+  .decorative-rec-icon {
+    margin: 23px 12px 0 0;
   }
   .decorated-zone::before {
-    inset: 0 96%;
+    top: 21px;
   }
   .header__theme-menu {
-    margin-top: 167px;
+    margin-top: 188px;
   }
   .header__heading {
-    margin: 177px 0 0 -20px;
+    margin: 173px 0 0 -20px;
   }
   .header__text {
-    margin-bottom: 204px;
+    margin-bottom: 184px;
     margin-right: 1px;
     justify-self: end;
     width: 49.9%;
   }
-  .main__content {
-    margin-bottom: 79px;
+  .content {
+    margin-bottom: 60px;
   }
   .why {
+    margin-top: 61px;
     gap: 20px;
     display: flex;
     justify-content: space-between;
   }
   .why__heading {
     width: 29%;
-    margin-top: 32px;
   }
   .why__list {
     width: 65%;
-    margin-top: 11px;
+  }
+  .why__list-item {
+    margin: 0;
+  }
+  .why__list-text {
+    margin-bottom: 17px;
   }
   .what {
-    margin-top: 77px;
+    margin-top: 62px;
   }
   .what__heading {
     width: 30.73vw;
@@ -339,30 +348,31 @@
     margin-top: 0;
     block-size: 100%;
   }
-  .footer__text {
-    margin-top: 445px;
-  }
 }
 @media (min-width: 1024px) {
-  .decorated-zone::before {
-    inset: 0 97.1%;
-  }
+ 
   .header__heading {
     margin-top: 277px;
     font-size: 157px;
   }
+  .decorated-zone::before {
+    top: 21px;
+  }
+  .decorated-zone::after {
+    bottom: 20px;
+  }
   .header__text {
-    margin: 0 0 157px 0;
+    margin-bottom: 135px;
   }
   .header__theme-menu {
     justify-self: center;
-    margin: 0;
+    margin-top: 19px;
   }
   .header__theme-menu-list {
     flex-direction: row;
   }
   .why {
-    margin-top: 9px;
+    margin-top: 60px;
   }
   .why__list {
     width: 66%;
@@ -402,6 +412,5 @@
   }
   .footer__text {
     font-size: 157px;
-    margin-top: 302px;
   }
 }

@@ -148,7 +148,7 @@
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-clr);
 }
-.accent-link:focus, .accent-link:focus-visible {
+.accent-link:focus-visible {
   outline: 1px solid var(--text-clr);
 }
 .accent-link:hover {

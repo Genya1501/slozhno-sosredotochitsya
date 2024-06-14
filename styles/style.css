@@ -83,7 +83,7 @@
   outline: none;
 }
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--headers-clr);
+  border-bottom: 1px solid var(--menu-clr);
 }
 .header__theme-menu-button_active {
   outline: 1px solid var(--menu-clr);
